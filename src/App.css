@@ -1,0 +1,91 @@
+.side::-webkit-scrollbar {
+  display: none;
+}
+.side {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.font-test {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+.op li:hover {
+  background-color: #3587ca;
+}
+
+.test tr:nth-child(odd) {
+  background-color: white;
+}
+
+.test tr:nth-child(even) {
+  background-color: #f5f9ff;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+textarea {
+  -ms-overflow-style: none;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  gap: 10px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #3498db;
+  opacity: 0.3;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+/* Sequential delays */
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* .ll{
+  transform: rotate(-1000deg);
+} */
+
+/* In index.css or a dedicated file */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .receipt {
+    width: 80mm; /* typical thermal paper width */
+    background: white;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  40% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+}
